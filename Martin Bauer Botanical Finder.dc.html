@@ -246,8 +246,8 @@
 
   <!-- DETAIL MODAL -->
   <sc-if value="{{ detailOpen }}" hint-placeholder-val="{{ false }}">
-    <div onClick="{{ closeDetail }}" style="position:fixed; inset:0; z-index:60; background:rgba(20,35,20,0.42); backdrop-filter:blur(3px); display:flex; align-items:center; justify-content:center; padding:20px;">
-      <div onClick="{{ stop }}" style="background:#fff; border-radius:20px; max-width:560px; width:100%; max-height:88vh; overflow-y:auto; padding:30px; box-shadow:0 24px 60px rgba(0,0,0,0.28); animation:mbPop 0.25s ease both;">
+    <div onClick="{{ closeDetail }}" style="position:fixed; inset:0; z-index:60; background:rgba(20,35,20,0.42); backdrop-filter:blur(3px); display:flex; align-items:flex-start; justify-content:center; padding:56px 20px 40px; overflow-y:auto;">
+      <div onClick="{{ stop }}" style="background:#fff; border-radius:20px; max-width:560px; width:100%; max-height:calc(100vh - 96px); overflow-y:auto; padding:30px; box-shadow:0 24px 60px rgba(0,0,0,0.28); animation:mbPop 0.25s ease both;">
         <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:14px;">
           <div>
             <div style="margin-bottom:9px;"><span style="display:inline-block; font-size:0.75rem; font-weight:600; padding:4px 11px; border-radius:20px; background:{{ detail.catBg }}; color:{{ detail.catFg }};">{{ detail.catLabel }}</span></div>
@@ -301,7 +301,7 @@
   <!-- BASKET SLIDE-OVER -->
   <sc-if value="{{ basketOpen }}" hint-placeholder-val="{{ false }}">
     <div onClick="{{ closeBasket }}" style="position:fixed; inset:0; z-index:70; background:rgba(20,35,20,0.42); backdrop-filter:blur(3px);">
-      <div onClick="{{ stop }}" style="position:absolute; top:0; right:0; height:100%; width:min(440px,100%); background:#f4f7f1; box-shadow:-14px 0 40px rgba(0,0,0,0.2); display:flex; flex-direction:column; animation:mbSlide 0.3s cubic-bezier(0.16,1,0.3,1) both;">
+      <div onClick="{{ stop }}" style="position:absolute; top:16px; right:16px; max-height:calc(100% - 32px); width:min(440px,calc(100% - 32px)); background:#f4f7f1; border-radius:16px; box-shadow:0 20px 50px rgba(0,0,0,0.25); display:flex; flex-direction:column; overflow:hidden; animation:mbSlide 0.3s cubic-bezier(0.16,1,0.3,1) both;">
         <div style="display:flex; align-items:center; justify-content:space-between; padding:20px 22px; background:#fff; border-bottom:1px solid #e6ecdf;">
           <div>
             <div style="font-family:'Newsreader',serif; font-weight:600; font-size:1.3rem; color:var(--brand-deep);">{{ t.basket }}</div>
@@ -310,7 +310,7 @@
           <button onClick="{{ closeBasket }}" style="width:34px; height:34px; border-radius:50%; border:none; background:#eef2e9; color:#5a6752; font-size:1.1rem; cursor:pointer;">✕</button>
         </div>
 
-        <div style="flex:1; overflow-y:auto; padding:16px 18px;">
+        <div style="flex:1 1 auto; min-height:0; overflow-y:auto; padding:16px 18px;">
           <sc-if value="{{ basketEmpty }}" hint-placeholder-val="{{ true }}">
             <div style="text-align:center; padding:60px 20px; color:#95a08b;">
               <div style="font-size:2rem; margin-bottom:12px;">🌿</div>
@@ -344,8 +344,8 @@
 
   <!-- REQUEST FORM MODAL -->
   <sc-if value="{{ formOpen }}" hint-placeholder-val="{{ false }}">
-    <div onClick="{{ closeForm }}" style="position:fixed; inset:0; z-index:80; background:rgba(20,35,20,0.5); backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; padding:20px;">
-      <div onClick="{{ stop }}" style="background:#fff; border-radius:20px; max-width:560px; width:100%; max-height:90vh; overflow-y:auto; padding:30px; box-shadow:0 24px 60px rgba(0,0,0,0.3); animation:mbPop 0.25s ease both;">
+    <div onClick="{{ closeForm }}" style="position:fixed; inset:0; z-index:80; background:rgba(20,35,20,0.5); backdrop-filter:blur(4px); display:flex; align-items:flex-start; justify-content:center; padding:56px 20px 40px; overflow-y:auto;">
+      <div onClick="{{ stop }}" style="background:#fff; border-radius:20px; max-width:560px; width:100%; max-height:calc(100vh - 96px); overflow-y:auto; padding:30px; box-shadow:0 24px 60px rgba(0,0,0,0.3); animation:mbPop 0.25s ease both;">
 
         <sc-if value="{{ showFormStage }}" hint-placeholder-val="{{ true }}">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
@@ -415,8 +415,8 @@
 
   <!-- PAID PLAN MODAL -->
   <sc-if value="{{ paidOpen }}" hint-placeholder-val="{{ false }}">
-    <div onClick="{{ closePaid }}" style="position:fixed; inset:0; z-index:90; background:rgba(20,35,20,0.5); backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; padding:20px;">
-      <div onClick="{{ stop }}" style="background:#fff; border-radius:20px; max-width:460px; width:100%; padding:34px 30px; text-align:center; box-shadow:0 24px 60px rgba(0,0,0,0.3); animation:mbPop 0.25s ease both;">
+    <div onClick="{{ closePaid }}" style="position:fixed; inset:0; z-index:90; background:rgba(20,35,20,0.5); backdrop-filter:blur(4px); display:flex; align-items:flex-start; justify-content:center; padding:56px 20px 40px; overflow-y:auto;">
+      <div onClick="{{ stop }}" style="background:#fff; border-radius:20px; max-width:460px; width:100%; max-height:calc(100vh - 96px); overflow-y:auto; padding:34px 30px; text-align:center; box-shadow:0 24px 60px rgba(0,0,0,0.3); animation:mbPop 0.25s ease both;">
         <div style="width:64px; height:64px; margin:0 auto 18px; border-radius:18px; background:linear-gradient(150deg,var(--brand),var(--brand-deep)); display:flex; align-items:center; justify-content:center; font-size:1.8rem;">🔒</div>
         <div style="display:inline-block; margin-bottom:12px; padding:3px 11px; border-radius:20px; background:#f4f0e2; color:#9a6a12; font-size:0.68rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">PRO</div>
         <h2 style="font-family:'Newsreader',serif; font-weight:600; font-size:1.6rem; color:var(--brand-deep); margin:0 0 10px;">{{ t.paidTitle }}</h2>
@@ -493,9 +493,30 @@ class Component extends DCLogic {
       if (window.MB_DATA && window.MB_I18N) { clearInterval(this._wait); this.setState({ready:true}); }
     }, 40);
   }
-  componentWillUnmount(){ clearInterval(this._wait); }
+  componentWillUnmount(){ clearInterval(this._wait); this.unlockScroll(); }
 
   persist(k,v){ try{ localStorage.setItem(k, v); }catch(e){} }
+
+  // Este widget roda embutido num iframe ("Incorporar site" do Wix). Os modais usam
+  // position:fixed, que se ancora na janela do PRÓPRIO iframe - não na página do Wix por fora.
+  // Se o iframe tiver altura fixa com rolagem interna, um modal aberto no meio de uma lista
+  // rolada apareceria fora da área visível (ou, se algum ancestral tiver transform, o fixed
+  // pode se comportar como absolute e ficar preso ao tamanho do conteúdo). Zerar o scroll do
+  // iframe ao abrir qualquer modal garante que ele apareça na área visível de qualquer forma,
+  // e restauramos a posição ao fechar.
+  lockScroll(){
+    if (this._scrollLocked) return;
+    this._scrollLocked = true;
+    this._savedScrollY = window.scrollY || window.pageYOffset || 0;
+    try { document.body.style.overflow = 'hidden'; } catch(e){}
+    try { window.scrollTo(0, 0); } catch(e){}
+  }
+  unlockScroll(){
+    if (!this._scrollLocked) return;
+    this._scrollLocked = false;
+    try { document.body.style.overflow = ''; } catch(e){}
+    try { window.scrollTo(0, this._savedScrollY || 0); } catch(e){}
+  }
 
   setLang(code){ this.setState({lang:code}); this.persist('mb_lang', code); }
   setLayout(key){ this.setState({layout:key}); this.persist('mb_layout', key); }
@@ -617,7 +638,7 @@ class Component extends DCLogic {
   }
 
   savePdf(){ try { window.print(); } catch(e){} }
-  saveSearch(){ this.setState({ paidOpen:true }); }
+  saveSearch(){ this.lockScroll(); this.setState({ paidOpen:true }); }
 
   renderVals() {
     const I = window.MB_I18N, DATA = window.MB_DATA || [];
@@ -659,7 +680,7 @@ class Component extends DCLogic {
         trendBg: isNiche ? '#eef2e9' : '#fdecdd',
         trendFg: isNiche ? '#5a6752' : '#b3591f',
         toggle: (e)=>{ if(e&&e.stopPropagation) e.stopPropagation(); this.toggle(d.en); },
-        openDetail: ()=> this.setState({detailId:d.en})
+        openDetail: ()=>{ this.lockScroll(); this.setState({detailId:d.en}); }
       };
     };
     const items = list.map(vm);
@@ -747,21 +768,21 @@ class Component extends DCLogic {
       trendsBadgeText: hasAiScores ? 'IA · 6M' : t.catalogIdx,
       savePdf:()=>this.savePdf(),
       saveSearch:()=>this.saveSearch(),
-      paidOpen: st.paidOpen, closePaid:()=>this.setState({paidOpen:false}),
+      paidOpen: st.paidOpen, closePaid:()=>{ this.unlockScroll(); this.setState({paidOpen:false}); },
       // detail
       detailOpen: !!detail, detail: detail||{names:[],claims:[],apps:[],formatLabels:[]},
-      closeDetail:()=>this.setState({detailId:null}),
+      closeDetail:()=>{ this.unlockScroll(); this.setState({detailId:null}); },
       stop:(e)=>{ if(e&&e.stopPropagation) e.stopPropagation(); },
       // basket
-      basketOpen: st.basketOpen, openBasket:()=>this.setState({basketOpen:true}), closeBasket:()=>this.setState({basketOpen:false}),
+      basketOpen: st.basketOpen, openBasket:()=>{ this.lockScroll(); this.setState({basketOpen:true}); }, closeBasket:()=>{ this.unlockScroll(); this.setState({basketOpen:false}); },
       basketItems, basketEmpty: basketItems.length===0,
       hasSelection: st.selected.length>0, selectedCount: st.selected.length,
       selCountText: `${st.selected.length} ${t.itemsSelected}`,
       clearSel:()=>this.clearSel(),
       // form
       formOpen: st.formOpen,
-      openForm:()=>this.setState({formOpen:true, basketOpen:false, formStage:'form', formError:false}),
-      closeForm:()=>this.setState({formOpen:false}),
+      openForm:()=>{ this.lockScroll(); this.setState({formOpen:true, basketOpen:false, formStage:'form', formError:false}); },
+      closeForm:()=>{ this.unlockScroll(); this.setState({formOpen:false}); },
       showFormStage: st.formStage==='form', sentStage: st.formStage==='sent',
       form:f,
       setName:(e)=>this.setState({form:{...f,name:e.target.value}}),
